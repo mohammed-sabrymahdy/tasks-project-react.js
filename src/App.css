@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  background-color: #f5f5f5;
+  font-family: "Alexandria", sans-serif;
+}
+
+.App {
+  text-align: center;
+}
+
+/* Animations and Styles */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceHover {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(139, 195, 74, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(139, 195, 74, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(139, 195, 74, 0);
+  }
+}
+
+.iconBtn {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  padding: 6px;
+  border: 2px solid transparent;
+}
+.iconBtn:hover {
+  animation: bounceHover 0.3s ease-in-out;
+  background-color: #e0e0e0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.iconBtn.completed {
+  background-color: #8bc34a;
+  color: white;
+  border-color: #8bc34a;
+  animation: pulse 1s ease-out infinite;
+}
+
+.todocard {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  margin: 16px 0;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.6s ease forwards;
+}
+.todocard:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+.todocardsmall {
+  transition: all 0.3s ease;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #f3e5f5;
+}
+.todocardsmall:hover {
+  background-color: #e1bee7;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Alexandria Font */
+@font-face {
+  font-family: "Alexandria";
+  src: url("/public/fonts/Alexandria-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Alexandria";
+  src: url("/public/fonts/Alexandria-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Alexandria";
+  src: url("/public/fonts/Alexandria-Black.ttf") format("truetype");
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Alexandria";
+  src: url("/public/fonts/Alexandria-Light.ttf") format("truetype");
+  font-weight: 300;
+}
